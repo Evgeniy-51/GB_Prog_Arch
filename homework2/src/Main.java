@@ -18,18 +18,17 @@ public class Main {
         generators.add(new CoinGenerator());
         generators.add(new MedalGenerator());
 
-        Random rnd = new Random();
-
 //        *
-        List<Integer> rnd_list = new ArrayList<>(Arrays.asList(0, 1, 1, 1));
+        List<Integer> index_list = new ArrayList<>(Arrays.asList(0, 1, 1, 1));
         for (int i = 2; i < 7; i++) {
             for (int j = 0; j < 10; j++) {
-                rnd_list.add(i);
+                index_list.add(i);
             }
         }
 
+        Random rnd = new Random();
         for (int i = 0; i < 20; i++) {
-            int listIndex = rnd_list.get(rnd.nextInt(rnd_list.size()));
+            int listIndex = index_list.get(rnd.nextInt(index_list.size()));
             generators.get(listIndex).openReward();
         }
 
