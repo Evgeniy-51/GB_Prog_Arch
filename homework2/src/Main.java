@@ -20,7 +20,7 @@ public class Main {
 
 //        *
         List<Integer> index_list = new ArrayList<>(Arrays.asList(0, 1, 1, 1));
-        for (int i = 2; i < 7; i++) {
+        for (int i = 2; i < generators.size(); i++) {
             for (int j = 0; j < 10; j++) {
                 index_list.add(i);
             }
